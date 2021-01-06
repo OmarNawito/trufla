@@ -1,17 +1,11 @@
 const { DataTypes } = require('sequelize');
 
 const db = require('../config/database');
-const Sequelize = require('sequelize')
-const Op = Sequelize.Op;
+// const Sequelize = require('sequelize')
+// const Op = Sequelize.Op;
 
 
 const User = db.define('User', {
-    id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
-        allowNull: false,
-        primaryKey: true
-    },
     firstName: {
         type: DataTypes.STRING,
         allowNull: false
@@ -36,20 +30,21 @@ const User = db.define('User', {
     }
 }, {
     tableName: 'users',
+    timestamps: true,
     indexes: [{
         fields: ['email'],
         unique: true
     }]
 })
 
-User.prototype.isEmailTaken = async function (email, excludeUserId) {
-    const user = await this.findOne({
-        where: {
-            email,
-            id: { [Op.ne]: excludeUserId }
-        }
-    });
-    return !!user;
-};
+// User.prototype.isEmailTaken = async function (email, excludeUserId) {
+//     const user = await this.findOne({
+//         where: {
+//             email,
+//             id: { [Op.ne]: excludeUserId }
+//         }
+//     });
+//     return !!user;
+// };
 
 module.exports = User;
