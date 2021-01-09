@@ -1,8 +1,8 @@
 const { DataTypes } = require('sequelize');
 
 const db = require('../config/database');
-// const Sequelize = require('sequelize')
-// const Op = Sequelize.Op;
+const bcrypt = require('bcrypt');
+const { roles } = require('../config/roles');
 
 
 const User = db.define('User', {
@@ -24,9 +24,20 @@ const User = db.define('User', {
             }
         }
     },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            min: 8
+        }
+    },
     job_title: {
         type: DataTypes.STRING,
         allowNull: true
+    },
+    role: {
+        type: DataTypes.ENUM(roles),
+        defaultValue: 'user'
     }
 }, {
     tableName: 'users',
@@ -34,17 +45,20 @@ const User = db.define('User', {
     indexes: [{
         fields: ['email'],
         unique: true
-    }]
+    }],
+})
+User.beforeCreate((user, options) => {
+    return bcrypt.hash(user.password, 10)
+    .then(hash => {
+        user.password = hash;
+    })
+    .catch(err => { 
+        throw new Error(); 
+    });   
 })
 
-// User.prototype.isEmailTaken = async function (email, excludeUserId) {
-//     const user = await this.findOne({
-//         where: {
-//             email,
-//             id: { [Op.ne]: excludeUserId }
-//         }
-//     });
-//     return !!user;
-// };
+User.prototype.validatePassword = function (password) {
+    return bcrypt.compareSync(password, this.password);
+}
 
 module.exports = User;

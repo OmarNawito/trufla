@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  trufla-app:
+    build: .
+    image: trufla-app
+    ports:
+      - '3000:3000'
+    depends_on:
+      - mysql
+    volumes:
+      - .:/usr/src/trufla-app
+
+  mysql:
+    image: 'bitnami/mysql:latest'
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=trufla
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./db:/bitnami/mysql/data
+
