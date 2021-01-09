@@ -1,0 +1,587 @@
+{
+	"id": "acafcddd-509f-42c9-9fc3-2c7f8b2b58bc",
+	"name": "trufal",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [],
+	"folders_order": [
+		"aa196d76-c950-4a4a-b7c1-fb9d6bc21bff",
+		"331bc34e-d1fa-49d9-872e-c3cf89d30af5",
+		"ed05c64e-5085-48ce-a305-3b306947d1e2"
+	],
+	"protocolProfileBehavior": {},
+	"folders": [
+		{
+			"id": "331bc34e-d1fa-49d9-872e-c3cf89d30af5",
+			"name": "articles",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "acafcddd-509f-42c9-9fc3-2c7f8b2b58bc",
+			"folder": null,
+			"order": [
+				"00b9b476-1b33-4791-a0c8-3716d521ae66",
+				"9546181b-e521-487d-a36c-642120966642",
+				"450ca2c7-243e-4583-9d10-87633b2b1ac8",
+				"4284abe3-a3da-4e49-ad35-8d79a72daf4c",
+				"2b4c1b72-38d2-4186-bd14-1e23da27107c"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "aa196d76-c950-4a4a-b7c1-fb9d6bc21bff",
+			"name": "auth",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "acafcddd-509f-42c9-9fc3-2c7f8b2b58bc",
+			"folder": null,
+			"order": [
+				"76ffa000-212f-4c2e-8d4e-13b3b32bed0d",
+				"b631fe84-e8cd-4064-89cd-8b28a6589436"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "ed05c64e-5085-48ce-a305-3b306947d1e2",
+			"name": "users",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "acafcddd-509f-42c9-9fc3-2c7f8b2b58bc",
+			"folder": null,
+			"order": [
+				"b9fb4251-b05b-42c7-a6a1-76a764578cce",
+				"6339e464-bfe4-430c-9977-d8525418453d",
+				"012f3307-db89-474d-b21c-66737ee469ce",
+				"c3f5ce3f-5be5-4119-9dd3-bc1c2b4e2df3"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"requests": [
+		{
+			"id": "00b9b476-1b33-4791-a0c8-3716d521ae66",
+			"name": "articles",
+			"url": "localhost:3000/v1/articles/",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "title",
+					"value": "test",
+					"equals": true,
+					"description": "",
+					"enabled": false
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTYxMDExNDEzOCwiZXhwIjoxNjE2ODY0MTk4LCJ0eXBlIjoiYWNjZXNzIn0.x6j6KsmXdTk-kqghA-TeVsiIURoa38vL1uXhVOgKNAs"
+					}
+				]
+			},
+			"events": null,
+			"folder": "331bc34e-d1fa-49d9-872e-c3cf89d30af5",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "012f3307-db89-474d-b21c-66737ee469ce",
+			"name": "get specific user",
+			"url": "localhost:3000/v1/users/1",
+			"description": "",
+			"data": [
+				{
+					"key": "firstName",
+					"value": "eshta",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "lastName",
+					"value": "aaa",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "asd@asd.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123456789",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "urlencoded",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "name",
+					"value": "omar",
+					"equals": true,
+					"description": "",
+					"enabled": false
+				}
+			],
+			"auth": {
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTYxMDEyMzgwNSwiZXhwIjoxNjE2ODczODY1LCJ0eXBlIjoiYWNjZXNzIn0.esO-eqUWoeBmejgBA-DiQ5t9FLf08ChZsuUcFci59xg"
+					}
+				],
+				"type": "bearer"
+			},
+			"events": [],
+			"folder": "ed05c64e-5085-48ce-a305-3b306947d1e2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "2b4c1b72-38d2-4186-bd14-1e23da27107c",
+			"name": "thumbs up",
+			"url": "localhost:3000/v1/articles/thumbs-up",
+			"description": null,
+			"data": [
+				{
+					"key": "articleId",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "urlencoded",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTYxMDEyMTU0MSwiZXhwIjoxNjE2ODcxNjAxLCJ0eXBlIjoiYWNjZXNzIn0.-FOxLhpNJcaP1csrlA3T2qxVx-zRN16d3T8BJh08ek8"
+					}
+				]
+			},
+			"events": null,
+			"folder": "331bc34e-d1fa-49d9-872e-c3cf89d30af5",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "4284abe3-a3da-4e49-ad35-8d79a72daf4c",
+			"name": "add comment",
+			"url": "localhost:3000/v1/articles/comment",
+			"description": null,
+			"data": [
+				{
+					"key": "body",
+					"value": "awesome",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "articleId",
+					"value": "2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "urlencoded",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTYxMDExNDQzMywiZXhwIjoxNjE2ODY0NDkzLCJ0eXBlIjoiYWNjZXNzIn0.xsfqrJT9zvDR3Sjf9b_tTIoz_2tVB2-6T11ULf0SbK4"
+					}
+				],
+				"type": "bearer"
+			},
+			"events": null,
+			"folder": "331bc34e-d1fa-49d9-872e-c3cf89d30af5",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "450ca2c7-243e-4583-9d10-87633b2b1ac8",
+			"name": "create article",
+			"url": "localhost:3000/v1/articles/",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTYxMDExNDQzMywiZXhwIjoxNjE2ODY0NDkzLCJ0eXBlIjoiYWNjZXNzIn0.xsfqrJT9zvDR3Sjf9b_tTIoz_2tVB2-6T11ULf0SbK4"
+					}
+				]
+			},
+			"events": null,
+			"folder": "331bc34e-d1fa-49d9-872e-c3cf89d30af5",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "6339e464-bfe4-430c-9977-d8525418453d",
+			"name": "get all users",
+			"url": "localhost:3000/v1/users/",
+			"description": "",
+			"data": [
+				{
+					"key": "firstName",
+					"value": "eshta",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "lastName",
+					"value": "aaa",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "asd@asd.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123456789",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "urlencoded",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "name",
+					"value": "omar",
+					"equals": true,
+					"description": "",
+					"enabled": false
+				}
+			],
+			"auth": {
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTYxMDEyMzgwNSwiZXhwIjoxNjE2ODczODY1LCJ0eXBlIjoiYWNjZXNzIn0.esO-eqUWoeBmejgBA-DiQ5t9FLf08ChZsuUcFci59xg"
+					}
+				],
+				"type": "bearer"
+			},
+			"events": [],
+			"folder": "ed05c64e-5085-48ce-a305-3b306947d1e2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "76ffa000-212f-4c2e-8d4e-13b3b32bed0d",
+			"name": "register",
+			"url": "localhost:3000/v1/auth/register",
+			"description": null,
+			"data": [
+				{
+					"key": "firstName",
+					"value": "omar",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "lastName",
+					"value": "nawito",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "o_mohsen@hotmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123456789a",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "job_title",
+					"value": "backend developer",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": {
+				"urlencoded": {}
+			},
+			"dataMode": "urlencoded",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "aa196d76-c950-4a4a-b7c1-fb9d6bc21bff",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "9546181b-e521-487d-a36c-642120966642",
+			"name": "get specicfic article",
+			"url": "localhost:3000/v1/articles/2",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTYxMDExNDEzOCwiZXhwIjoxNjE2ODY0MTk4LCJ0eXBlIjoiYWNjZXNzIn0.x6j6KsmXdTk-kqghA-TeVsiIURoa38vL1uXhVOgKNAs"
+					}
+				]
+			},
+			"events": null,
+			"folder": "331bc34e-d1fa-49d9-872e-c3cf89d30af5",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "b631fe84-e8cd-4064-89cd-8b28a6589436",
+			"name": "login",
+			"url": "localhost:3000/v1/auth/login",
+			"description": null,
+			"data": [
+				{
+					"key": "email",
+					"value": "admin@hotmail.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123456789",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": {
+				"urlencoded": {}
+			},
+			"dataMode": "urlencoded",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "aa196d76-c950-4a4a-b7c1-fb9d6bc21bff",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "b9fb4251-b05b-42c7-a6a1-76a764578cce",
+			"name": "create user",
+			"url": "localhost:3000/v1/users/",
+			"description": "",
+			"data": [
+				{
+					"key": "firstName",
+					"value": "eshta",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "lastName",
+					"value": "aaa",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "asd@asd.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123456789",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "urlencoded",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTYxMDEyMzgwNSwiZXhwIjoxNjE2ODczODY1LCJ0eXBlIjoiYWNjZXNzIn0.esO-eqUWoeBmejgBA-DiQ5t9FLf08ChZsuUcFci59xg"
+					}
+				]
+			},
+			"events": [],
+			"folder": "ed05c64e-5085-48ce-a305-3b306947d1e2",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "c3f5ce3f-5be5-4119-9dd3-bc1c2b4e2df3",
+			"name": "update user",
+			"url": "localhost:3000/v1/users/1",
+			"description": "",
+			"data": [
+				{
+					"key": "firstName",
+					"value": "eshta",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "lastName",
+					"value": "aaa",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "asd1@asd1.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "123456789",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "urlencoded",
+			"headerData": [],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "name",
+					"value": "omar",
+					"equals": true,
+					"description": "",
+					"enabled": false
+				}
+			],
+			"auth": {
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTYxMDEyMzgwNSwiZXhwIjoxNjE2ODczODY1LCJ0eXBlIjoiYWNjZXNzIn0.esO-eqUWoeBmejgBA-DiQ5t9FLf08ChZsuUcFci59xg"
+					}
+				],
+				"type": "bearer"
+			},
+			"events": [],
+			"folder": "ed05c64e-5085-48ce-a305-3b306947d1e2",
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}
